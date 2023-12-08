@@ -1,0 +1,119 @@
+/* main */
+
+main {
+    padding: 20px;
+    background-color: #ffffff;
+    /* Pure white for contrast with art */
+    flex: 1;
+}
+
+
+
+/* Gallery and Card Styles */
+.gallery {
+    flex: 1;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s;
+
+    transition: transform 0.3s ease;
+    /* cursor: zoom-in; */
+    /* Indicates that the image can be zoomed*/
+}
+
+.card p {
+    position: absolute;
+    bottom: 10px;
+    /* Position at the bottom of the card */
+    right: 10px;
+    /* Position at the right of the card */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    /* Start invisible */
+    transition: opacity 0.3s;
+    /* Smooth transition for the fade-in effect */
+    pointer-events: none;
+    /* Ensure the text does not interfere with image hover */
+}
+
+.card:hover p {
+    opacity: 1;
+    /* Fade in on hover */
+    /*transform: scale(1.1);  Scales the image up to 110% on hover */
+
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+
+@media (max-width: 600px) {
+    .card p {
+        position: absolute;
+        bottom: 5px;
+        /* Adjusted for smaller screens */
+        right: 5px;
+        /* Adjusted for smaller screens */
+        font-size: 12px;
+        /* Smaller font size for mobile */
+        padding: 3px 6px;
+        /* Adjust padding */
+        border-radius: 3px;
+        /* Adjust border radius */
+        /* Ensure that the width doesn't exceed the card width */
+        max-width: calc(100% - 10px);
+        box-sizing: border-box;
+        /* Include padding in width calculation */
+        white-space: normal;
+        /* Allow text to wrap */
+        overflow: hidden;
+        /* Hide overflow */
+        text-overflow: ellipsis;
+        /* Add ellipsis for overflowed text */
+    }
+
+    /* Adjust card size or layout as needed */
+
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #202020;
+    color: #d0d0d0;
+}
