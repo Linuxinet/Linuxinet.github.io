@@ -73,3 +73,23 @@ function loadBlogPosts() {
 
 document.addEventListener('DOMContentLoaded', loadBlogPosts);
 
+
+// Google Analytics initialization
+function initGoogleAnalytics() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+  
+    gtag('config', 'G-CBGS903MB5');
+  }
+  
+  // Load the Google Analytics script
+  function loadGoogleAnalyticsScript() {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-CBGS903MB5';
+    script.onload = initGoogleAnalytics;
+    document.head.appendChild(script);
+  }
+  
+  loadGoogleAnalyticsScript();
