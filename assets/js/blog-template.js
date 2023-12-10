@@ -20,11 +20,11 @@ function createHeader() {
     let headerHTML = `
         <header>
             <nav id="navbar">
-                <a href="/index.html">Home</a>
-                <a href="/blog.html">Blog</a>
-                <a href="/gallery.html">AI Art Gallery</a>
-                <a href="/projects.html">Projects</a>
-                <a href="/about.html">About Me</a>
+                <a href="/">Home</a>
+                <a href="/blog/">Blog</a>
+                <a href="/gallery/">AI Art Gallery</a>
+                <a href="/projects/">Projects</a>
+                <a href="/about/">About Me</a>
             </nav>
         </header>`;
     document.body.insertAdjacentHTML('afterbegin', headerHTML);

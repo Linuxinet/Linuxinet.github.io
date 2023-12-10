@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Existing code for loading images
-    fetch('assets/images.json')
+    fetch('/assets/images.json')
         .then(response => response.json())
         .then(data => {
             const gallery = document.querySelector('.gallery');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 card.className = 'card';
 
                 const img = document.createElement('img');
-                img.src = "assets/img/" + image.name;
+                img.src = "/assets/img/" + image.name;
                 img.alt = 'Artwork';
 
                 const promptText = document.createElement('p');

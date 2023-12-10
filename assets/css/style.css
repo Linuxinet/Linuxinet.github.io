@@ -53,10 +53,12 @@ footer {
 .intro-section {
     text-align: center;
     padding: 50px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-background-image.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/intro.png');
     background-size: cover;
     color: white;
 }
+
+
 
 html {
     scroll-behavior: smooth;

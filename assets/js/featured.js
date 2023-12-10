@@ -1,5 +1,5 @@
 function loadFeaturedContent() {
-    fetch('assets/featured.json')
+    fetch('/assets/featured.json')
         .then(response => response.json())
         .then(data => {
             const blogsContainer = document.getElementById('featured-blogs');
@@ -21,7 +21,7 @@ function loadFeaturedContent() {
 }
 
 function loadFeaturedAiArt() {
-    fetch('assets/images.json') // Adjust the path as necessary
+    fetch('/assets/images.json') // Adjust the path as necessary
         .then(response => response.json())
         .then(data => {
             const featuredGallery = document.querySelector('#featured-art .gallery');
@@ -33,7 +33,7 @@ function loadFeaturedAiArt() {
                 card.className = 'card';
 
                 const img = document.createElement('img');
-                img.src = "assets/img/" + image.name;
+                img.src = "/assets/img/" + image.name;
                 img.alt = 'Featured Artwork';
 
                 const promptText = document.createElement('p');
