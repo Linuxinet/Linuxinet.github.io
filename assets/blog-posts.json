@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Coming Soon",
+        "date": "2023-12-01",
+        "shortDescription": "Exciting content coming soon...",
+        "coverImage": "assets/img/coming-soon.png",
+        "tags": ["Tag1", "Tag2"],
+        "link": "/posts/post1.html"
+    }
+]
