@@ -11,7 +11,6 @@ function loadBlogPosts() {
         .then(posts => {
             const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
             const blogContainer = document.getElementById('blog');
-
             sortedPosts.forEach(post => {
                 const postElement = document.createElement('section');
                 postElement.className = 'blog-post';

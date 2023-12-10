@@ -4,14 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             const gallery = document.querySelector('.gallery');
-            data.images.forEach(function (image) {
+            // Sort images by date in descending order (newest first)
+            const sortedImages = data.images.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            sortedImages.forEach(function (image) {
                 const card = document.createElement('div');
                 card.className = 'card';
 
                 const img = document.createElement('img');
                 img.src = "assets/img/" + image.name;
                 img.alt = 'Artwork';
-                // assets/img/art-img/DALL·E 2023-12-08 12.32.48.png
+
                 const promptText = document.createElement('p');
                 promptText.textContent = image.prompt;
 
