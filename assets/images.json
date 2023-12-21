@@ -44,6 +44,11 @@
             "name":"art-img/0xlinuxinet_epic_monsters_Sci_fi_cities.png",
             "prompt":"Epic monsters, Sci fi cities, luffy, ancient kingdom --stylize 750 --v 5.2",
             "date": "2023-12-07"
+        },
+        {
+            "name":"art-img/ComfyUI_temp_oeafe_00001_.png",
+            "prompt":"crystal water lowing in a calm blue sky, trending artstation, digital art, fog, sun flare, heat, glow, vivid, beautiful, by james jean, by ross tran, ultra detailed, character design, concept art",
+            "date": "2023-12-21"
         }
     ]
 }
